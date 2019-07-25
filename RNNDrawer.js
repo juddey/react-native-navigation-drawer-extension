@@ -216,7 +216,7 @@ const RNNDrawer = Component => {
      * Removes all the listenrs from this component
      */
     removeListeners(){
-      this.unsubscribeSwipeStart();
+      if (this.unsubscribeSwipeStart) { this.unsubscribeSwipeStart() }
       this.unsubscribeSwipeMove();
       this.unsubscribeSwipeEnd();
       this.unsubscribeDismissDrawer();
