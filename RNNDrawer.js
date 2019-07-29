@@ -217,9 +217,9 @@ const RNNDrawer = Component => {
      */
     removeListeners(){
       if (this.unsubscribeSwipeStart) { this.unsubscribeSwipeStart() }
-      this.unsubscribeSwipeMove();
-      this.unsubscribeSwipeEnd();
-      this.unsubscribeDismissDrawer();
+      if (this.unsubscribeSwipeMove) { this.unsubscribeSwipeMove() }
+      if (this.unsubscribeSwipeEnd) { this.unsubscribeSwipeEnd() }
+      if (this.unsubscribeDismissDrawer) { this.unsubscribeDismissDrawer() }
     }
 
     /**
